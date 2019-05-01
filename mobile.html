@@ -1,0 +1,36 @@
+<title>Mobile Now?</title>
+ 
+       
+ 
+<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 
+      <h1 style="font-size:300%; text-align: center">Let's try WURFL out:</h1>
+       
+      <div id="wurfl">
+       
+      <h1 class="is-mobile">Bạn đang sử dụng thiết bị di động: <span style="color: blue ">false</span>.</h1>
+      <h1 class="form-factor">Thiết bị của bạn là một: <span style="color:red">Desktop</span>.</h1>
+      <h1 class="device-name">Bạn đang sử dụng một: <span style="color: green">Google Chrome</span>.</h1>
+   
+       </div>
+ 
+ 
+<style>
+      #wurfl{
+            text-align:center; 
+            background-color: lightblue; 
+            border:2px solid black
+      }
+</style>
+ 
+<script>
+if(!WURFL.is_mobile){
+      $('#wurfl .is-mobile span').html("false");
+}
+else{
+      $('#wurfl .is-mobile span').html("true");
+}
+$('#wurfl .form-factor span').html( WURFL.form_factor);
+$('#wurfl .device-name span').html( WURFL.complete_device_name);
+</script>
